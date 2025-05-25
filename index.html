@@ -7,13 +7,8 @@
     <meta name="description" content="Damien Bouet">
     <meta name="author" content="Damien Bouet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="icon" type="image/png" href="img/moi.png">
+    <link rel="icon" type="image/png" href="img/moi2.png">
   
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
     <!-- Custom styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -25,72 +20,107 @@
     
   </head>
   
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
   <body>
-    <header class="sidebar">
-        <div class="profile">
-            <div class="background"></div>
-            <img src="img/moi.png" alt="My Photo">
-            <h2 class="title" id="title_name">DAMIEN BOUET</h2>
-            <section id="coordonnées-expander" class="expander">
-                <h2 class="title" onclick="toggleExpand()">Coordonnées ▽</h2>
-                <div class="expand-content">
-                    <div class="icon-text">
-                        <div class="icon" style="background-image: url('img/telephone.png');"></div>
-                        <div class="text">07.85.33.15.32</div>
-                    </div>
-                    <div class="icon-text">
-                        <div class="icon" style="background-image: url('img/mail.png');"></div>
-                        <div class="text">damien.bouet@student-cs.fr</div>
-                    </div>
-                    <div class="icon-text">
-                        <div class="icon" style="background-image: url('img/linkedin.png');"></div>
-                        <div class="text"><a href='https://www.linkedin.com/in/damien-bouet-13331a221/'>LinkedIn</a></div>
-                    </div>
-                    <div class="icon-text">
-                        <div class="icon" style="background-image: url('img/github.png');"></div>
-                        <div class="text"><a href='https://github.com/Damien-Bouet'>GitHub</a></div>
-                    </div>
-                </div>
-            </section>
-            <div id="coordonnées-div">
-                <h2 class="title">Coordonnées</h2>
-                <div class="icon-text">
-                    <div class="icon" style="background-image: url('img/telephone.png');"></div>
-                    <div class="text">07.85.33.15.32</div>
-                </div>
-                <div class="icon-text">
-                    <div class="icon" style="background-image: url('img/mail.png');"></div>
-                    <div class="text">damien.bouet@student-cs.fr</div>
-                </div>
-                <div class="icon-text">
-                    <div class="icon" style="background-image: url('img/linkedin.png');"></div>
-                    <div class="text"><a href='https://www.linkedin.com/in/damien-bouet-13331a221/'>LinkedIn</a></div>
-                </div>
-                <div class="icon-text">
-                    <div class="icon" style="background-image: url('img/github.png');"></div>
-                    <div class="text"><a href='https://github.com/Damien-Bouet'>GitHub</a></div>
-                </div>
-            </div>
-        </div>
-    </header>
     
-    <section class="content">
-        <h2 class="title">Projets :</h2>
-        <div class="projects">
-            <div class="project" onclick="openProject('project.html')">
-                <h2>Project 1</h2>
-                <p>Short description of project 1.</p>
+    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
+    <div id="menu">
+        <div class="choix" onclick="openPage('index.html')">Accueil</div>
+        <div class="choix" onclick="scrollToElement('exp_pro')">Expériences Pro</div>
+        <div class="choix" onclick="scrollToElement('projets')">Projets</div>
+        <div class="choix" onclick="scrollToElement('etudes')">Etudes</div>
+        <div class="choix" onclick="scrollToElement('contact')">Contact</div>
+    </div>
+
+    <div id="title">
+        <div>
+            <div class="text">
+                SALUT, C'EST DAMIEN !<br>
+                ETUDIANT EN DATA SCIENCE<br>
+                CENTRALESUPELEC | MVA<br>
             </div>
-            <div class="project" onclick="openProject('project.html')">
-                <h2>Project 2</h2>
-                <p>Short description of project 2.</p>
+            <div class="keywords">
+                <div class="words">Deep Learning</div>
+                <div class="dot"></div>
+                <div class="words">Computer Vision</div>
+                <div class="dot"></div>
+                <div class="words">Recherche</div>
             </div>
-            <div class="project" onclick="openProject('project.html')">
-                <h2>Project 3</h2>
-                <p>Short description of project 3.</p>
+            <div style="width: 75%; margin-top: 15px; text-align: right;">
+                <div class="choix button" onclick="scrollToElement('contact')">Contact</div>
             </div>
         </div>
-    </section>
+        <div style="width: 5%;"></div>
+        <img class='profile' src="img/moi2.png" alt="My Photo">
+    </div>
+
+
+    <div class="projets">
+        <div class="title" id="exp_pro">Expériences Pro</div>
+
+        <div class="projects">
+            <div class="project" onclick="openPage('stage_idemia.html')">
+                <h2>Recherche en Computer Vision</h2>
+                <p>IDEMIA</p>
+            </div>
+            <div class="project" onclick="openPage('stage_quantmetry.html')">
+                <h2>Recherche et Conseil Data</h2>
+                <p>Quantmetry</p>
+            </div>
+            <div class="project" onclick="openPage('stage_saint_gobain.html')">
+                <h2>Data Scientist</h2>
+                <p>Saint-Gobain</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="projets" id="projets">
+        <div class="title">Projets</div>
+        <div class="projects">
+            <div class="project" onclick="openPage('cbct_segmentation.html')">
+                <h2>3D Teeth Segmentation</h2>
+                <p>Projet de recherche - dernière année</p>
+            </div>
+            <div class="project" onclick="openPage('cleaning_blob.html')">
+                <h2>Cleaning Blob</h2>
+                <p>Automatisation d'un robot - Reinforcement Learning</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="projets" id="etudes">
+        <div class="title">Etudes</div>
+
+        <div class="projects">
+            <div class="project" onclick="openPage('centrale.html')">
+                <h2>CentraleSupélec</h2>
+                <p>Diplôme d'ingénieur</p>
+                <p>Mathématiques et Science des données</p>
+            </div>
+            <div class="project" onclick="openPage('mva.html')">
+                <h2>MVA (ENS Paris Saclay)</h2>
+                <p>Master 2</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" style="
+        background-color: var(--blue1);
+        width: 100%;
+        color: white;
+        position: absolute;
+        left: 0;"
+    >
+        <h3 style="padding: 1rem 1rem 0 1rem; margin: 0;">Contacts</h3>   
+            <div style="display: inline-block; padding: 1rem;"><i class="fas fa-envelope"></i> <a href="mailto:bouet.dam@gmail.com">bouet.dam@gmail.com</a></div>
+            <div style="display: inline-block; padding: 1rem;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/damien-bouet-13331a221/" target="_blank">LinkedIn</a></div>
+            <div style="display: inline-block; padding: 1rem;"><i class="fab fa-github"></i> <a href="https://github.com/Damien-Bouet" target="_blank">Github</a></div>
+    </div>
     
     <script src="script.js"></script>
 </body>

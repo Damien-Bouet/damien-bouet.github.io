@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Damien Bouet - IDEMIA</title>
+    <meta name="description" content="Stage de recherche, Data Science - IDEMIA Public Security">
+    <meta name="author" content="Damien Bouet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="img/moi2.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
+    <div id="menu">
+        <div class="choix" onclick="openPage('index.html')">Accueil</div>
+        <div class="choix" onclick="openPage('index.html?scroll=exp_pro')">Expériences Pro</div>
+        <div class="choix" onclick="openPage('index.html?scroll=projets')">Projets</div>
+        <div class="choix" onclick="openPage('index.html?scroll=etudes')">Etudes</div>
+        <div class="choix" onclick="openPage('index.html?scroll=etudes')">Contact</div>
+    </div>
+
+    <div class="project_description">
+        <div class="title-container">
+          <div class="title-text">
+            <div class="title">IDEMIA Public Security</div>
+            <div class="sub_title">Stage de recherche, Data Science (mai 2025 - novembre 2025)</div>
+          </div>
+          <div class="title-logos">
+            <div class="title-logo">
+              <img src="img/Idemia.png" alt="IDEMIA Logo">
+            </div>
+          </div>
+        </div>
+
+        <div class="keywords" style="margin-bottom: 40px;">
+            <div class="words">Computer Vision</div>
+            <div class="dot"></div>
+            <div class="words">Transformers</div>
+            <div class="dot"></div>
+            <div class="words">ONNX / TensorRT</div>
+            <div class="dot"></div>
+            <div class="words">Optimisation temps réel</div>
+        </div>
+        <div class="text">
+            J'ai travaillé sur les trackers vidéo, en explorant les architectures à base de Transformers pour la vision.
+            Mon rôle a consisté à mener une veille sur l'état de l'art et à proposer des solutions innovantes.
+        </div>
+        <div class="text">
+            J'ai benchmarké des méthodes existantes et développé de nouveaux modèles, adaptés aux contraintes du terrain. 
+            Une attention particulière a été portée à l'exportation des modèles vers les formats ONNX et TensorRT, 
+            pour un déploiement accéléré sur GPU.
+        </div>
+        <div class="text">
+            Les optimisations pour un usage en temps réel ont été un enjeu majeur, avec une adaptation fine aux spécificités 
+            des produits IDEMIA.
+        </div>
+        <div style="width:100%">
+          <img src="img/cars.png" style="height: 12rem; display: inline-block; margin: 20px auto;">
+          <img src="img/DETR.png" style="height: 12rem; display: inline-block; margin: 20px auto;">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

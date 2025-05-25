@@ -1,16 +1,15 @@
-function openProject(url) {
+function openPage(url) {
   window.location.href = url;
 }
 
-function toggleExpand() {
-  const content = document.querySelector(".expand-content");
-  const title = document.querySelector(".expander h2");
-  if (title.innerHTML == "Coordonnées ▽") {
-      content.style.display = "block";
-      content.style.top = "193px";
-      title.innerHTML = "Coordonnées △"
-  } else {
-      content.style.top = "0px";
-      title.innerHTML = "Coordonnées ▽"
-  }
+function scrollToElement(element_id){
+  document.getElementById(element_id).scrollIntoView({ behavior: "smooth" });
 }
+
+window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+  const scrollPos = params.get("scroll");
+  if (scrollPos) {
+    document.getElementById(scrollPos).scrollIntoView({ behavior: "smooth" });
+  }
+};

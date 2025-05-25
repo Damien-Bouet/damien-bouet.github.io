@@ -3,130 +3,138 @@
   color: inherit;
 }
 
+
+:root{
+  --text : #06171e;
+  --blue2: #06668C;
+  --blue1: #427AA1;
+  --white: #EBF2FA;
+  --green1: #679436;
+  --green2: #06668C;
+}
+
+
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: black;
+  font-family: Trebuchet MS, Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--text);
 }
 
 
-/* =============== Horizontal ================= */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 270px;
-  height: 100%;
-  height: 100vh;
-  background: #333;
-  color: white;
+#menu {
+  display: flex;
+  width: 60%;
+  margin-left: 20%;
+  justify-content: space-around;
+  padding: 20px;
 }
 
-.sidebar .background {
-  z-index: 2;
-  height: 208px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  background: #333;
-}
-
-.content{
+#menu .choix {
   position: relative;
-  margin-left: 270px;
-  margin-top: 0;
-  padding: 0;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-#coordonnées-div {
-  display: block;
+.choix::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* thickness of the underline */
+  background-color: var(--text); /* color of the underline */
+  transition: width 0.2s ease-in-out; /* animation for growing */
 }
-#coordonnées-expander {
-  display: none;
+
+.choix:hover::after {
+  width: 100%; /* underlines fully when hovering */
 }
 
 
-.profile img {
-  z-index: 3;
-  width: 160px;
-  height: 160px;
-  border: solid white 4px;
+#title{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+img.profile {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  background-color: var(--blue1);
   border-radius: 50%;
-  margin: 20px;
+  margin-bottom: 20px;
   position: relative;
   top: 0;
   left: 0;
 }
 
 
-.expand-content {
-  display: none;
-  z-index:1;
-  padding-bottom: 10px;
-  width: 80%;
-  margin-left: 10%;
-  position: absolute;
-  top: 0px;
-  background: #333;
+#title .text{
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.8em;
+  width: 370px;
+  line-height: 1.3em;
+}
+
+.keywords{
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.keywords .words{
+  font-size: 1em;
+}
+
+.dot{
+  width:10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--blue2);
+  margin: 0 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 1.2em;
   border-radius: 20px;
-  padding-top: 20px;
-  transition: top 1s;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid var(--blue2); /* Initial border color */
+  color: var(--blue2); /* Initial text color */
+  background-color: transparent; /* Initial background color */
+  transition: all 0.3s ease; /* Transition effect for color, background, and border */
 }
 
-/* ==================== Vertical =================== */
-@media screen and (max-width: 600px) {
-  .sidebar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: min-content;
-    background: #333;
-    color: white;
-  }
-
-  .content {
-    margin-left: 0;
-    margin-top: 170px;
-    width: 100%;
-  }
-  #coordonnées-div {
-    display: none;
-  }
-  #coordonnées-expander {
-    display: block;
-    margin-top: 157px;
-  }
-
-  .expand-content {
-    display: block;
-
-  }
-  .profile img {
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 125px;
-    height: 125px;
-  }
-
-  #title_name {
-    z-index: 3;
-    position: absolute;
-    top: 47px;
-    font-size: 1.5em;
-    text-align: center;
-    width: calc(100% - 200px);
-    margin-left: 159px;    
-  }
-
+.button:hover {
+  color: var(--white); /* Change text color to transparent */
+  background-color: var(--blue2); /* Change background to blue */
+  border-color: var(--blue2); /* Keep border blue */
 }
 
+.text{
+  text-align: justify;
+}
 
+.projets .title{
+  font-size: 2em;
+}
+
+.cours_title{
+  font-size: 1.6em !important;
+  text-align: unset !important;
+}
 
 .projects {
   display: flex;
@@ -151,34 +159,129 @@ body {
 }
 
 
-h2.title{
-  font-size: 1.3em;
-  padding: 5px;
-  text-align: left;
+
+
+.project_description{
+  display: block;
+  width: 90%;
+  margin-left: 5%;
 }
 
-.expander h2 {
-  cursor: pointer;
-  position: relative;
-  z-index: 3;
+.project_description .title{
+  font-size: 2.4em;
 }
-
-.icon-text .icon{
-  width: 40px;
-  height: 40px;
-  background-size: 100%;
-  display: inline-block;
+.project_description .sub_title{
+  font-size: 1.4em;
 }
-
-.icon-text .text{
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  top: -14px;
+.project_description .text{
   font-size: 1em;
+  margin-top: 15px;
 }
 
-.icon-text{
-  text-align: left;
-  padding-left: 6px;
+
+.package {
+  background-color: rgb(202, 202, 202);
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-family: monospace;
 }
+
+/* =============== MVA ================= */
+
+
+.title-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2%;
+  margin-top: 2.5em;
+}
+
+/* Text block */
+.title-text {
+  flex: 1 1 20em; /* flexible width with min width to wrap */
+  margin-top: 1em;
+}
+
+/* Wrapper for logos */
+.title-logos {
+  display: flex;
+  flex: 0 1 auto; /* shrink if needed */
+  flex-wrap: wrap; /* let logos wrap if container is too narrow */
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+/* Individual logo blocks */
+.title-logo {
+  flex: 0 1 4em; /* logos have width, but can shrink */
+  height: 4em;
+}
+
+.title-logo img {
+  height: 100%;
+  display: block;
+}
+
+/* Optional: Adjust logo block stacking on extra small screens */
+@media (max-width: 30) {
+  .title-logo {
+    flex: 1 1 100%;
+  }
+}
+
+/* +++++++++++++++++++++== */
+.container {
+  display: flex;
+  gap: 2%;
+  margin-top: 40px;
+  align-items: end;
+  flex-wrap: wrap; 
+}
+
+.text-block {
+  flex: 0 0 60%;
+}
+
+.image-block {
+  flex: 0 0 38%; /* 100 - 60 - 4 gap% */
+}
+
+.image-block img {
+  width: 100%;
+  max-width: 20rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-block .text {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* Responsive: stack vertically on narrow screens */
+@media (max-width: 50rem) {
+
+  .container{
+    flex-direction: column;
+  }
+  
+  .container.flex_reverse{
+    flex-direction: column-reverse;
+  }
+
+  .text-block,
+  .image-block {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .image-block {
+    margin-top: 1.25rem;
+  }
+}
+/* ==================== Vertical =================== */
+/* @media screen and (max-width: 600px) {
+ 
+} */
+
