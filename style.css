@@ -14,6 +14,23 @@
 }
 
 
+a:link {
+  color: inherit; /* or specify a color */
+  text-decoration: none; /* optional, removes underline */
+}
+
+a:visited {
+  color: inherit; /* same as above */
+}
+
+a:hover {
+  color: inherit; /* same as above */
+}
+
+a:active {
+  color: inherit; /* same as above */
+}
+
 body {
   font-family: Trebuchet MS, Arial, sans-serif;
   background-color: var(--white);
