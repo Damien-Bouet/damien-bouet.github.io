@@ -11,6 +11,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
   </head>
   
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
   <body>
     <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
     <div id="menu">
@@ -36,23 +41,50 @@
         <div class="keywords" style="margin-bottom: 40px;">
             <div class="words">Prédictions conformes</div>
             <div class="dot"></div>
-            <div class="words">MAPIE</div>
+            <div class="words">Statistique</div>
+            <div class="dot"></div>
+            <div class="words">Open-source</div>
+            <div class="dot"></div>
+            <div class="words">Contact Client</div>
             <div class="dot"></div>
             <div class="words">Bayesian Networks</div>
-            <div class="dot"></div>
-            <div class="words">Statistiques avancées</div>
         </div>
         <div class="text">
             Pendant ce stage, j'ai travaillé sur les prédictions conformes adaptatives, en étudiant l'état de l'art et en comparant les méthodes existantes.
+            C'est une branche des statistiques qui fournit des intervalles de prédiction avec des garanties théoriques de couverture.
+            Appliqué à des modèles de machine learning ou de deep learning, souvent peu (voire pas) interprétables et explicables, cela permet d'augmenter la confiance accordée aux prédictions.
+            En effet, si l'on sait que la prédiction se situe entre telle et telle valeur avec 95 % de fiabilité, on peut beaucoup plus sereinement prendre des décisions basées sur ces prédictions.
+            Utiliser des intervalles de prédiction peut s'avérer indispensable dans de nombreux contextes, où les professionnels ou les utilisateurs manquent souvent de confiance dans les modèles.
         </div>
         <div class="text">
-            J'ai implémenté un article scientifique dans le package open-source <span  class='package'>MAPIE</span>.
-        </div>
-        <div class="text">
-            Lors de ma mission pour Stellantis, j'ai réalisé une analyse statistique de l'importance des étapes du parcours client, en utilisant des réseaux bayésiens (graphes et EM) 
-            et des tests statistiques avancés.
+            J'ai implémenté une méthode de l'état de l'art dans le package open-source scikit-learn-contrib <span  class='package'>MAPIE</span>.
+            Cela m'a appris à produire un code de qualité, avec tous les standards liés à un package open-source connu comme scikit-learn.
         </div>
         <img src="img/conformal_prediction.png" style="height: 16rem; display: block; margin: 20px auto;">
+        <div class="text">
+            J'ai aussi fait une mission pour Stellantis. J'ai réalisé une analyse statistique de l'importance des étapes du parcours client, en utilisant des réseaux bayésiens (graphes et algorithme d'Espérance-Maximisation) 
+            et des tests statistiques. J'ai été placé en autonomie sur cette mission, face au client, autant pour produire le code que présenter les résultats.
+        </div>
+        <div style="display: flex;">
+          <img src="img/stellantis.png" style="height: 6rem; display: inline-block; margin: 20px auto;">
+          <img src="img/reseau_bayesien.png" style="height: 6rem; display: inline-block; margin: 20px auto;">
+        </div>
+        
+    </div>
+
+
+    <div id="contact" style="
+        background-color: var(--blue1);
+        width: 100%;
+        color: white;
+        position: absolute;
+        left: 0;
+        margin-top:3rem;"
+    >
+        <h3 style="padding: 1rem 1rem 0 1rem; margin: 0; font-size:1.8em;">Contacts</h3>   
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fas fa-envelope"></i> <a href="mailto:bouet.dam@gmail.com">bouet.dam@gmail.com</a></div>
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/damien-bouet-13331a221/" target="_blank">LinkedIn</a></div>
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fab fa-github"></i> <a href="https://github.com/Damien-Bouet" target="_blank">Github</a></div>
     </div>
 
     <script src="script.js"></script>

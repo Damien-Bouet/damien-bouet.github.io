@@ -11,6 +11,11 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 </head>
 
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
 <body>
     <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
     <div id="menu">
@@ -38,11 +43,75 @@
     </div>
     <div class="text" style="margin-bottom: 40px;">
       Pendant ma dernière année à CentraleSupélec, j'ai pu suivir en double diplôme le master MVA à l'ENS Paris-Saclay.
-      Ce master m'a permis de compléter ma formation, en approfondissant certains sujets d'apprentissage automatique, systématiquement mis en pratique à travers des projets.
-      Voici un aperçu des cours et projets que j'ai réalisés durant cette année.
+      Ce master m'a permis d'approfondir certains sujets d'apprentissage automatique, en les mettant systématiquement en pratique à travers des projets.
+      Ce master complète parfaitement ma formation à CentraleSupélec. 
+      <div class="choix button" onclick="openPage('centrale')" style="font-size: 1.2em; margin: 1rem; display: block; width: fit-content;">Détails sur CentraleSupélec</div>
     </div>
 
     <!-- Course 1 -->
+     <div class="container">
+      <div class="text-block">
+        <div class="text cours_title"><b>Probabilistic Graphical Models and Deep Generative Models</b></div>
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Modèles Probabilistes</div>
+            <div class="dot"></div>
+            <div class="words">Modèles de Markov</div>
+            <div class="dot"></div>
+            <div class="words">Algorithme EM</div>
+        </div>
+        <div class="text">
+			Ce cours présente une introduction aux modèles probabilistes via les modèles graphiques et
+			leurs algorithmes d'inférence et d'apprentissage. Il explore les développements récents en modèles
+			génératifs profonds tels que les autoencodeurs variationnels et les réseaux antagonistes génératifs.
+			Le programme couvre des techniques variées, de l'EM aux modèles de diffusion.
+        </div>
+        <div class="text" style="margin-top: 10px;"><b>Project: Deep Generative Models for Missing-Not-at-Random Data</b></div>
+        <div class="text">
+          	Nous avons ré-implémenté la méthode developpée dans l'article.
+			Nous avons entrainé un modèle génératif profond pour reconstruire des données MNAR.
+			Ces données manquantes dépendent de la valeur manquante elle-même. Inférer les données manquantes
+			avec un modèle génératif permet donc d'améliorer grandement la qualité des reconstructions.
+        </div>
+      </div>
+      <div class="image-block">
+        <img src="img/notMIWAE.png" alt="Shape Interpolation">
+      </div>
+    </div>
+
+    
+    <!-- Course 2 -->
+	 <div class="container flex_reverse">
+      <div class="image-block">
+        <img src="img/llms.png" alt="Shape Interpolation">
+      </div>
+      <div class="text-block">
+        <div class="text cours_title"><b>Large Language Models</b></div>
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">LLMs</div>
+            <div class="dot"></div>
+            <div class="words">Fine Tuning</div>
+            <div class="dot"></div>
+            <div class="words">Quantization</div>
+        </div>
+        <div class="text">
+          	Ce cours m'a permis de comprendre en profondeur l'architecture Transformer, notamment les mécanismes
+            d'attention, en codant un modèle GPT complet. J'ai étudié les différents tokenizeers, positionnal embeddings et architectures.
+            J'ai exploré des techniques de prétraitement et de fine-tuning telles que GRPO, RLHF et LoRA,
+            afin d'adapter les modèles aux tâches spécifiques.
+        </div>
+        <div class="text" style="margin-top: 10px;"><b>Projet: Entrainer un LLM à réaliser des additions</b></div>
+        <div class="text">
+			    Ce projet m'a permis de comprendre en profondeur l'impact du tokenizer. Un LLM classique fait pour 
+          traiter du texte n'arrivera pas à traiter les tâches chiffrées. Alors qu'utiliser un tokenizer ou
+          un positionnal embedding adapté donne facilement le bon résultat pour des
+          additions de nombre de plus de dix chiffres.
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Course 3 -->
+	
     <div class="container">
       <div class="text-block">
         <div class="text cours_title"><b>Geometric Data Analysis</b></div>
@@ -75,6 +144,67 @@
       </div>
     </div>
 
+
+
+    <!-- Course 4 -->
+	 <div class="container flex_reverse">
+      <div class="image-block">
+        <img src="img/piano_transcription.png" alt="Piano transcription method">
+      </div>
+      <div class="text-block">
+        <div class="text cours_title"><b>Geometry Processing and Geometric Deep Learning</b></div>
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">3D Processing</div>
+            <div class="dot"></div>
+            <div class="words">Multi-View Diffusion</div>
+            <div class="dot"></div>
+            <div class="words">Deep Learning on Mesh</div>
+        </div>
+        <div class="text">
+          	Ce cours explore l'analyse des signaux audio, l'indexation sonore, la séparation de sources,
+			la synthèse spatiale et la modification des sons. 
+        </div>
+        <div class="text" style="margin-top: 10px;"><b>Projet: Automatic piano music transcription</b></div>
+        <div class="text">
+			J'ai développé un modèle de deep learning qui permet de convertir un enregistrement audio de piano
+			en un fichier midi (détection des notes et tempo). Le modèle est un réseau CNN qui prend en entrée
+			la CQ-transform (variante de la transformée de Fourier).
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Course 5 -->
+	 <div class="container">
+      <div class="text-block">
+        <div class="text cours_title"><b>Machine Learning for Time Series</b></div>
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Séries temporelles</div>
+            <div class="dot"></div>
+            <div class="words">Features</div>
+            <div class="dot"></div>
+            <div class="words">Détection d'anomalies</div>
+        </div>
+        <div class="text">
+			Ce cours explore les techniques de Machine Learning appliquées aux séries temporelles,
+			en mettant l'accent sur la compréhension, la représentation et l'extraction d'informations pertinentes.
+			Les thématiques abordées incluent la détection d'anomalies, la prédiction, l'extraction de motifs,
+			et la gestion des données manquantes. Des exemples concrets et des projets pratiques
+			permettent aux étudiants de maîtriser ces techniques.
+        </div>
+        <div class="text" style="margin-top: 10px;"><b>Project: Deep Generative Models for Missing-Not-at-Random Data</b></div>
+        <div class="text">
+          	Nous avons ré-implémenté la méthode developpée dans l'article.
+			Nous avons entrainé un modèle génératif profond pour reconstruire des données MNAR.
+			Ces données manquantes dépendent de la valeur manquante elle-même. Inférer les données manquantes
+			avec un modèle génératif permet donc d'améliorer grandement la qualité des reconstructions.
+        </div>
+      </div>
+      <div class="image-block">
+        <img src="img/CID.png" alt="Shape Interpolation">
+      </div>
+    </div>
+
     <!-- Course 2 -->
 	 <div class="container flex_reverse">
       <div class="image-block">
@@ -102,95 +232,18 @@
       </div>
     </div>
 
-
-    <!-- Course 3 -->
-	<div class="container">
-      <div class="text-block">
-        <div class="text cours_title"><b>Probabilistic Graphical Models and Deep Generative Models</b></div>
-        <div class="keywords" style="margin-bottom: 20px;">
-            <div class="words">Modèles Probabilistes</div>
-            <div class="dot"></div>
-            <div class="words">Modèles de Markov</div>
-            <div class="dot"></div>
-            <div class="words">Algorithme EM</div>
-        </div>
-        <div class="text">
-			Ce cours présente une introduction aux modèles probabilistes via les modèles graphiques et
-			leurs algorithmes d'inférence et d'apprentissage. Il explore les développements récents en modèles
-			génératifs profonds tels que les autoencodeurs variationnels et les réseaux antagonistes génératifs.
-			Le programme couvre des techniques variées, de l'EM aux modèles de diffusion.
-        </div>
-        <div class="text" style="margin-top: 10px;"><b>Project: Deep Generative Models for Missing-Not-at-Random Data</b></div>
-        <div class="text">
-          	Nous avons ré-implémenté la méthode developpée dans l'article.
-			Nous avons entrainé un modèle génératif profond pour reconstruire des données MNAR.
-			Ces données manquantes dépendent de la valeur manquante elle-même. Inférer les données manquantes
-			avec un modèle génératif permet donc d'améliorer grandement la qualité des reconstructions.
-        </div>
-      </div>
-      <div class="image-block">
-        <img src="img/notMIWAE.png" alt="Shape Interpolation">
-      </div>
-    </div>
-
-
-    <!-- Course 4 -->
-	 <div class="container flex_reverse">
-      <div class="image-block">
-        <img src="img/piano_transcription.png" alt="Piano transcription method">
-      </div>
-      <div class="text-block">
-        <div class="text cours_title"><b>Geometry Processing and Geometric Deep Learning</b></div>
-        <div class="keywords" style="margin-bottom: 20px;">
-            <div class="words">3D Processing</div>
-            <div class="dot"></div>
-            <div class="words">Multi-View Diffusion</div>
-            <div class="dot"></div>
-            <div class="words">Deep Learning on Mesh</div>
-        </div>
-        <div class="text">
-          	Ce cours explore l’analyse des signaux audio, l’indexation sonore, la séparation de sources,
-			la synthèse spatiale et la modification des sons. 
-        </div>
-        <div class="text" style="margin-top: 10px;"><b>Projet: Automatic piano music transcription</b></div>
-        <div class="text">
-			J'ai développé un modèle de deep learning qui permet de convertir un enregistrement audio de piano
-			en un fichier midi (détection des notes et tempo). Le modèle est un réseau CNN qui prend en entrée
-			la CQ-transform (variante de la transformée de Fourier).
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Course 5 -->
-	 <div class="container">
-      <div class="text-block">
-        <div class="text cours_title"><b>Machine Learning for Time Series</b></div>
-        <div class="keywords" style="margin-bottom: 20px;">
-            <div class="words">Séries temporelles</div>
-            <div class="dot"></div>
-            <div class="words">Features</div>
-            <div class="dot"></div>
-            <div class="words">Détection d'anomalies</div>
-        </div>
-        <div class="text">
-			Ce cours explore les techniques de Machine Learning appliquées aux séries temporelles,
-			en mettant l’accent sur la compréhension, la représentation et l’extraction d’informations pertinentes.
-			Les thématiques abordées incluent la détection d’anomalies, la prédiction, l’extraction de motifs,
-			et la gestion des données manquantes. Des exemples concrets et des projets pratiques
-			permettent aux étudiants de maîtriser ces techniques.
-        </div>
-        <div class="text" style="margin-top: 10px;"><b>Project: Deep Generative Models for Missing-Not-at-Random Data</b></div>
-        <div class="text">
-          	Nous avons ré-implémenté la méthode developpée dans l'article.
-			Nous avons entrainé un modèle génératif profond pour reconstruire des données MNAR.
-			Ces données manquantes dépendent de la valeur manquante elle-même. Inférer les données manquantes
-			avec un modèle génératif permet donc d'améliorer grandement la qualité des reconstructions.
-        </div>
-      </div>
-      <div class="image-block">
-        <img src="img/CID.png" alt="Shape Interpolation">
-      </div>
+  <div id="contact" style="
+        background-color: var(--blue1);
+        width: 100%;
+        color: white;
+        position: absolute;
+        left: 0;
+        margin-top:3rem;"
+    >
+        <h3 style="padding: 1rem 1rem 0 1rem; margin: 0; font-size:1.8em;">Contacts</h3>   
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fas fa-envelope"></i> <a href="mailto:bouet.dam@gmail.com">bouet.dam@gmail.com</a></div>
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/damien-bouet-13331a221/" target="_blank">LinkedIn</a></div>
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fab fa-github"></i> <a href="https://github.com/Damien-Bouet" target="_blank">Github</a></div>
     </div>
 
   <script src="script.js"></script>

@@ -11,6 +11,11 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 </head>
 
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
 <body>
     <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
     <div id="menu">
@@ -35,9 +40,180 @@
     </div>
     <div class="text" style="margin-bottom: 40px;">
       En dernière année à CentraleSupélec, j'ai choisis la mention science des données et de l'information, dans la dominante Mathématiques et Data science.
-      J'ai pu suivre de nombreux cours de Deep Learning, et mettre en pratique dans des projets.
+      J'ai pu suivre de nombreux cours de mathématiques, statistiques, machine learning et deep Learning, et mettre en pratique dans des projets. 
+
+      J'ai aussi suivis en parallèle le master MVA avec l'ENS Paris-Saclay, où j'ai choisi des cours de deep learning pour compléter mes connaissances.
+      <div class="choix button" onclick="openPage('mva')" style="font-size: 1.2em; margin: 1rem; display: block; width: fit-content;">Détails sur le MVA</div>
     </div>
 
+    <!-- Course 1 -->
+    <div class="container">
+      <div class="text-block">
+        <div class="text cours_title" style="display: inline-block;">
+          <b>Projet de recherche en Computer Vision</b>
+        </div>
+        <div class="choix button" onclick="openPage('cbct_segmentation')" style="font-size: 1.2em; margin-left: 1rem; display: inline-block;">Détails</div>
+
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Computer vision</div>
+            <div class="dot"></div>
+            <div class="words">Recherche</div>
+            <div class="dot"></div>
+            <div class="words">Domaine Médical</div>
+        </div>
+        <div class="text">
+          J'ai eu l'occassion de réalisé un projet de recherche pendant 6 mois avec un ami, en partenariat avec un chercheur
+          du CVN (laboratoire de computer vision de CentraleSupélec) et une start-up. Le but était de développer une méthode
+          permettant de segmenter et d'identifier les dents dans un scan 3D de la machoire, pour aider les dentistes dans leurs analyses.
+          J'ai appris plein de choses sur le domaine dentaire, et médical de façon générale. Et j'ai bien entendu beaucoup gangé 
+          en expérience en computer vision, particulièrement en segmentation.
+        </div>
+          
+      </div>
+      <div div class="image-block">
+        <img src="img/segmentation.png" alt="Segmentation en 3D">
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="text-block">
+        <div class="text cours_title" style="display: inline-block;">
+          <b>Deep Learning</b>
+        </div>
+
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Self-supervision</div>
+            <div class="dot"></div>
+            <div class="words">NLP</div>
+            <div class="dot"></div>
+            <div class="words">Reinforcement Learning</div>
+            <div class="dot"></div>
+            <div class="words">Generative models</div>
+            <div class="dot"></div>
+            <div class="words">Diffusion</div>
+        </div>
+        <!-- <div class="text">
+        </div> -->
+      </div>
+      <div div class="image-block"></div>
+    </div>
+
+    <div class="container flex_reverse">
+      <div div class="image-block"></div>
+      <div class="text-block">
+        <div class="text cours_title" style="display: inline-block;">
+          <b>Machine Learning</b>
+        </div>
+
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Regression</div>
+            <div class="dot"></div>
+            <div class="words">Classification</div>
+            <div class="dot"></div>
+            <div class="words">Clustering</div>
+            <div class="dot"></div>
+            <div class="words">Mixture models</div>
+            <div class="dot"></div>
+            <div class="words">Graphical models</div>
+            <div class="dot"></div>
+            <div class="words">Apprentissage supervisé/non supervisé</div>
+        </div>
+        <!-- <div class="text">
+        </div> -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-block">
+        <div class="text cours_title" style="display: inline-block;">
+          <b>Apprentissage par renforcemeent</b>
+        </div>
+
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Q-Learning</div>
+            <div class="dot"></div>
+            <div class="words">Monte Carlo Control</div>
+            <div class="dot"></div>
+            <div class="words">Temporal difference Control</div>
+            <div class="dot"></div>
+            <div class="words">Off-Policy Learning</div>
+            <div class="dot"></div>
+            <div class="words">Deep Q-Learning</div>
+            <div class="dot"></div>
+            <div class="words">PPO</div>
+        </div>
+        <!-- <div class="text">
+        </div> -->
+      </div>
+      <div div class="image-block"></div>
+    </div>
+
+    <div class="container flex_reverse">
+      <div div class="image-block"></div>
+      <div class="text-block">
+        <div class="text cours_title" style="display: inline-block;">
+          <b>Morphologie Moderne</b>
+        </div>
+
+        <div class="keywords" style="margin-bottom: 20px;">
+            <div class="words">Traitement d'image morphologique</div>
+            <div class="dot"></div>
+            <div class="words">Dilatation/Erosion</div>
+            <div class="dot"></div>
+            <div class="words">Ouverture/Fermeture</div>
+            <div class="dot"></div>
+            <div class="words">Algorithme de partage des eaux</div>
+            <div class="dot"></div>
+            <div class="words">Random Walker</div>
+        </div>
+        <!-- <div class="text">
+        </div> -->
+      </div>
+    </div>
+
+    <div class="container" style="width: 100%; display: block;">
+      <div class="text-block">
+        <div class="text cours_title" style="display: inline-block;">
+          <b>Autres cours</b>
+        </div>
+
+        <div class="keywords" style="margin-bottom: 20px; display:block">
+            <div class="dot" style="display:inline-block"></div>
+            <div class="words" style="display:inline">Mathématiques : Intégration, convergence, probabilités, Equations aux dérivées partielles, intégration stochastique</div>
+        </div>
+        <div class="keywords" style="margin-bottom: 20px; display:block">
+            <div class="dot" style="display:inline-block"></div>
+            <div class="words" style="display:inline">Statistiques : estimateurs, inférence bayesienne, inférence de confiance, estimation de densité, kernels à noyaux, bootstrap</div>
+        </div>
+        <div class="keywords" style="margin-bottom: 20px; display:block">
+            <div class="dot" style="display:inline-block"></div>
+            <div class="words" style="display:inline">Algorithmie : Parcours de graphes, arbres couvrants, arbres de flot, programmation dynamique, théorie de la complexité</div>
+        </div>
+        <div class="keywords" style="margin-bottom: 20px; display:block">
+            <div class="dot" style="display:inline-block"></div>
+            <div class="words" style="display:inline">Physique : Matériaux, Mécanique des milieux continus, physique quantique, rayonnement et propagation</div>
+        </div>
+        <div class="keywords" style="margin-bottom: 20px; display:block">
+            <div class="dot" style="display:inline-block"></div>
+            <div class="words" style="display:inline">Optimisation, modélisation, traitement du signal</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" style="
+        background-color: var(--blue1);
+        width: 100%;
+        color: white;
+        position: absolute;
+        left: 0;
+        margin-top:3rem;"
+    >
+        <h3 style="padding: 1rem 1rem 0 1rem; margin: 0; font-size:1.8em;">Contacts</h3>   
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fas fa-envelope"></i> <a href="mailto:bouet.dam@gmail.com">bouet.dam@gmail.com</a></div>
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/damien-bouet-13331a221/" target="_blank">LinkedIn</a></div>
+            <div style="display: inline-block; padding: 1rem; font-size:1.2em;"><i class="fab fa-github"></i> <a href="https://github.com/Damien-Bouet" target="_blank">Github</a></div>
+    </div>
 
   <script src="script.js"></script>
 </body>
