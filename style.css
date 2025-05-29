@@ -37,16 +37,6 @@ body {
   color: var(--text);
 }
 
-nav {
-  position: fixed;
-  top: 1rem;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Stay on top of other content */
-  background-color: var(--background);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 
 
 /* Existing menu styling for larger screens */
@@ -56,14 +46,14 @@ nav {
   margin-left: 20%;
   justify-content: space-around;
   padding: 20px;
-  width: max-content;
+  box-shadow: unset;
 }
+
 
 #menu .choix {
   position: relative;
   font-size: 1.2em;
   cursor: pointer;
-  width: 100%;
 }
 
 #menu .choix::after {
@@ -95,8 +85,28 @@ nav {
   position: fixed;
 }
 
+@media (max-width: 48rem){
+  .project_description .title{
+    margin-top: 4rem !important;
+  }
+
+  #title{
+    margin-top: 6rem !important;
+  }
+}
+
 /* Responsive styling */
-@media (max-width: 40rem) {
+@media (max-width: 48rem) {
+  nav {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Stay on top of other content */
+    background-color: var(--background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
   #menu-button {
     display: block;
   }
@@ -105,10 +115,11 @@ nav {
     display: none;
     flex-direction: column;
     margin: 0;
+    width: max-content;
     padding: 0.5rem;
     background-color: var(--background);
     position: absolute;
-    top: 50px;
+    top: 3rem;
     right: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: solid 0.15rem var(--blue2);
@@ -124,6 +135,7 @@ nav {
   #menu .choix {
     padding: 5%;
     box-sizing: border-box;
+    width: 100%;
     border-bottom: 1px solid var(--text);
   }
 
@@ -136,22 +148,22 @@ nav {
 
 #title{
     display: flex;
-    width: 80%;
+    width: 100%;
+    margin-top: 2rem;
     flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    margin: 5
 }
 
 
 img.profile {
   display: inline-block;
   vertical-align: middle;
-  width: 200px;
-  height: 200px;
+  width: 12rem;
+  height: 12rem;
   background-color: var(--blue1);
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 1.2em;
   position: relative;
   top: 0;
   left: 0;
@@ -161,8 +173,9 @@ img.profile {
 #title .text{
   vertical-align: middle;
   display: inline-block;
+  text-align: left;
   font-size: 1.8em;
-  width: 370px;
+  max-width: 25rem;
   line-height: 1.3em;
 }
 
@@ -217,6 +230,7 @@ img.profile {
 .projets .title{
   font-size: 2em;
   padding-left: 1rem;
+  padding-top: 1rem;
 }
 
 .cours_title{
@@ -235,7 +249,7 @@ img.profile {
 .project {
   background: white;
   padding: 15px;
-  width: 300px;
+  width: 15rem;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
@@ -257,6 +271,7 @@ img.profile {
 
 .project_description .title{
   font-size: 2.4em;
+  margin-top: 2rem;
 }
 .project_description .sub_title{
   font-size: 1.4em;
@@ -348,7 +363,7 @@ img.profile {
 }
 
 /* Responsive: stack vertically on narrow screens */
-@media (max-width: 50rem) {
+@media (max-width: 48rem) {
 
   .container{
     flex-direction: column;
@@ -371,7 +386,7 @@ img.profile {
 /* ==================== Vertical =================== */
 @media (max-width: 25rem) {
  .text{
-    text-align: left;
+    text-align: left !important;
   }
 }
 

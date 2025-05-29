@@ -2,16 +2,30 @@ function openPage(url) {
   window.location.href = url;
 }
 
-function scrollToElement(element_id){
-  document.getElementById(element_id).scrollIntoView({ behavior: "smooth" });
-  toggleMenu();
+function scrollToElement(element_id) {
+  // Check if current page is not index.html
+  if (!window.location.pathname.endsWith("index.html")) {
+    // Save the target element id in localStorage
+    localStorage.setItem("scrollTarget", element_id);
+
+    // Navigate to index.html
+    window.location.href = "index.html";
+  } else {
+    // If already on index.html, scroll directly
+    document.getElementById(element_id).scrollIntoView({ behavior: "smooth" });
+    toggleMenu();
+  }
 }
 
+
 window.onload = function () {
-  const params = new URLSearchParams(window.location.search);
-  const scrollPos = params.get("scroll");
+  const scrollPos = localStorage.getItem("scrollTarget");
   if (scrollPos) {
-    document.getElementById(scrollPos).scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(scrollPos);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    localStorage.removeItem("scrollTarget");
   }
 };
 

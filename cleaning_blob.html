@@ -27,7 +27,7 @@
   
   <body>
     
-    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
+    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px; top: 0.3rem;">DB.</div>
     <nav>
         <div id="menu-button" onclick="toggleMenu()">Menu</div>
         <div id="menu">
@@ -40,7 +40,7 @@
     </nav>
 
     <div class="project_description">
-        <div class="title" style="margin-top: 30px;">Cleaning Blob</div>
+        <div class="title" >Cleaning Blob</div>
         <div class="sub_title">Automatisation d'un robot par Reinforcement Learning</div>
         <div class="keywords" style="margin-bottom: 40px;">
             <div class="words">RL</div>
@@ -55,12 +55,12 @@
             Ce projet est né de ma volonté de mettre en pratique et approfondir mes connaissances en RL sur un cas réel.<br>
         </div>
         <div class="text">
-            J'ai alors choisit un robot, développé par la startup KeelCrab. C'est un robot télécommandé qui permet de nettoyer la coque des bateaux.
+            J'ai alors choisi un robot, développé par la startup KeelCrab. C'est un robot télécommandé qui permet de nettoyer la coque des bateaux.
             Il est maintenu contre la coque par un système d'aspiration et peut ête déplacé par l'utilisateur à distance.
-            Le processus, jusque là manuel, est long et fastidiuex, et semble pouvoir être automatisé.
+            Le processus, jusque là manuel, est long et fastidieux, et semble pouvoir être automatisé.
         </div>
-        <div style="display: flex;">
-            <img src="img/coque2.png" style="width:30%; scale:1; display:inline-block;">
+        <div style="display: flex; align-items: flex-end;">
+            <img src="img/coque2.png" style="width:30%; scale:1; height: max-content; display:inline-block;">
             <div class="text" style="display: inline-block; width:64%; margin-left: 5%;">
                 J'ai donc développé un environement simulé, dans le logiciel Unity, communiquant avec un script python,
                 pour pouvoir entrainer des algorithmes d'apprentissage par renforcement (RL).
@@ -84,7 +84,7 @@
 
         <div style="display: flex; margin-top:40px">
             <div class="text" style="display: inline-block; width:54%; margin-right: 5%;">
-                J'ai entrainé un algorithme de PPO (Proximal Policy Optimization), en donnant simplement une récompense poru chaque carré d'algue nettoyyé.
+                J'ai entraîné un algorithme de PPO (Proximal Policy Optimization), en donnant simplement une récompense pour chaque carré d'algue nettoyé.
                 On peut voir que l'agent à appris à se diriger vers les algues. Il a même appris, spontanément,
                 une trajectoire de nettoyage optimisée, en tournant de façon circulaire à partir du bord.
             </div>

@@ -17,14 +17,17 @@
     />
 
 <body>
-    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
-    <div id="menu">
-        <div class="choix" onclick="openPage('index.html')">Accueil</div>
-        <div class="choix" onclick="openPage('index.html?scroll=exp_pro')">Expériences Pro</div>
-        <div class="choix" onclick="openPage('index.html?scroll=projets')">Projets</div>
-        <div class="choix" onclick="openPage('index.html?scroll=etudes')">Etudes</div>
-        <div class="choix" onclick="openPage('index.html?scroll=contact')">Contact</div>
-    </div>
+    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px; top: 0.3rem;">DB.</div>
+    <nav>
+        <div id="menu-button" onclick="toggleMenu()">Menu</div>
+        <div id="menu">
+            <div class="choix" onclick="openPage('index.html')">Accueil</div>
+            <div class="choix" onclick="scrollToElement('exp_pro')">Expériences Pro</div>
+            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
+            <div class="choix" onclick="scrollToElement('etudes')">Etudes</div>
+            <div class="choix" onclick="scrollToElement('contact')">Contact</div>
+        </div>
+    </nav>
 
 <div class="project_description">
     <div class="title-container">
@@ -95,7 +98,7 @@
         </div>
         <div class="text">
           	Ce cours m'a permis de comprendre en profondeur l'architecture Transformer, notamment les mécanismes
-            d'attention, en codant un modèle GPT complet. J'ai étudié les différents tokenizeers, positionnal embeddings et architectures.
+            d'attention, en codant un modèle GPT complet. J'ai étudié les différents tokenizers, positionnal embeddings et architectures.
             J'ai exploré des techniques de prétraitement et de fine-tuning telles que GRPO, RLHF et LoRA,
             afin d'adapter les modèles aux tâches spécifiques.
         </div>

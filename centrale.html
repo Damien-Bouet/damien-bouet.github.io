@@ -17,14 +17,17 @@
     />
 
 <body>
-    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px;">DB.</div>
-    <div id="menu">
-        <div class="choix" onclick="openPage('index.html')">Accueil</div>
-        <div class="choix" onclick="openPage('index.html?scroll=exp_pro')">Expériences Pro</div>
-        <div class="choix" onclick="openPage('index.html?scroll=projets')">Projets</div>
-        <div class="choix" onclick="openPage('index.html?scroll=etudes')">Etudes</div>
-        <div class="choix" onclick="openPage('index.html?scroll=contact')">Contact</div>
-    </div>
+    <div style="font-size: 2.5em; font-weight: bold; position: absolute; padding: 10px 20px; top: 0.3rem;">DB.</div>
+    <nav>
+        <div id="menu-button" onclick="toggleMenu()">Menu</div>
+        <div id="menu">
+            <div class="choix" onclick="openPage('index.html')">Accueil</div>
+            <div class="choix" onclick="scrollToElement('exp_pro')">Expériences Pro</div>
+            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
+            <div class="choix" onclick="scrollToElement('etudes')">Etudes</div>
+            <div class="choix" onclick="scrollToElement('contact')">Contact</div>
+        </div>
+    </nav>
 
 <div class="project_description">
     <div class="title-container">
@@ -39,10 +42,10 @@
       </div>
     </div>
     <div class="text" style="margin-bottom: 40px;">
-      En dernière année à CentraleSupélec, j'ai choisis la mention science des données et de l'information, dans la dominante Mathématiques et Data science.
-      J'ai pu suivre de nombreux cours de mathématiques, statistiques, machine learning et deep Learning, et mettre en pratique dans des projets. 
+      En dernière année à CentraleSupélec, j'ai choisi la mention science des données et de l'information, dans la dominante Mathématiques et Data Science.
+      J'ai suivi de nombreux cours de mathématiques, statistiques, Machine Learning et Deep Learning, et les mettre en pratique dans des projets. 
 
-      J'ai aussi suivis en parallèle le master MVA avec l'ENS Paris-Saclay, où j'ai choisi des cours de deep learning pour compléter mes connaissances.
+      J'ai aussi suivi en parallèle le master MVA avec l'ENS Paris-Saclay, où j'ai choisi des cours de Deep Learning pour compléter mes connaissances.
       <div class="choix button" onclick="openPage('mva')" style="font-size: 1.2em; margin: 1rem; display: block; width: fit-content;">Détails sur le MVA</div>
     </div>
 
@@ -62,10 +65,10 @@
             <div class="words">Domaine Médical</div>
         </div>
         <div class="text">
-          J'ai eu l'occassion de réalisé un projet de recherche pendant 6 mois avec un ami, en partenariat avec un chercheur
+          J'ai eu l'occasion de réaliser un projet de recherche pendant 6 mois en binôme, en partenariat avec un chercheur
           du CVN (laboratoire de computer vision de CentraleSupélec) et une start-up. Le but était de développer une méthode
-          permettant de segmenter et d'identifier les dents dans un scan 3D de la machoire, pour aider les dentistes dans leurs analyses.
-          J'ai appris plein de choses sur le domaine dentaire, et médical de façon générale. Et j'ai bien entendu beaucoup gangé 
+          permettant de segmenter et d'identifier les dents dans un scan 3D de la mâchoire, pour aider les dentistes dans leurs analyses.
+          J'ai appris plein de choses sur le domaine dentaire, et médical de façon générale. J'ai gagné 
           en expérience en computer vision, particulièrement en segmentation.
         </div>
           
