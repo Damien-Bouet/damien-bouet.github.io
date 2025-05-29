@@ -37,22 +37,34 @@ body {
   color: var(--text);
 }
 
+nav {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Stay on top of other content */
+  background-color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+
+
+/* Existing menu styling for larger screens */
 #menu {
   display: flex;
   width: 60%;
   margin-left: 20%;
   justify-content: space-around;
   padding: 20px;
+  width: max-content;
 }
-
 
 #menu .choix {
   position: relative;
   font-size: 1.2em;
   cursor: pointer;
+  width: 100%;
 }
-
 
 #menu .choix::after {
   content: '';
@@ -60,23 +72,75 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* thickness of the underline */
-  background-color: var(--text); /* color of the underline */
-  transition: width 0.2s ease-in-out; /* animation for growing */
+  height: 2px;
+  background-color: var(--text);
+  transition: width 0.2s ease-in-out;
 }
-
 
 #menu .choix:hover::after {
-  width: 100%; /* underlines fully when hovering */
+  width: 100%;
 }
+
+/* Hide menu button on large screens */
+#menu-button {
+  display: none;    
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: var(--blue2);
+  color: var(--white);
+  font-size: 1.5em;
+  border-radius: 0.8rem;
+  position: absolute;
+  right: 1rem;
+  position: fixed;
+}
+
+/* Responsive styling */
+@media (max-width: 40rem) {
+  #menu-button {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.5rem;
+    background-color: var(--background);
+    position: absolute;
+    top: 50px;
+    right: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: solid 0.15rem var(--blue2);
+    border-radius: 1rem;
+    z-index: 100;
+    background: #ebf2fae8;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu .choix {
+    padding: 5%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--text);
+  }
+
+  #menu .choix:last-child {
+    border-bottom: none;
+  }
+}
+
 
 
 #title{
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 5
 }
 
 
@@ -305,7 +369,9 @@ img.profile {
   }
 }
 /* ==================== Vertical =================== */
-/* @media screen and (max-width: 600px) {
- 
-} */
+@media (max-width: 25rem) {
+ .text{
+    text-align: left;
+  }
+}
 
