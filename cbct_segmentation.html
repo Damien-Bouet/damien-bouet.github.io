@@ -66,9 +66,13 @@
         <!-- Block 1 -->
         <div >
             <div class="text"><b>1. Détection de la mâchoire & projection panoramique</b></div>
-            <div style="display: flex; margin-top: 10px;">
-                <img src="img/pano.png" style="width: 40%; margin-right: 5%;">
-                <img src="img/pano_projection.png" style="width: 40%;">
+            <div class="container" style="align-items: flex-start;">
+                <div class="text-block" style="flex: 0 0 48%;">
+                    <img src="img/pano.png" style="width: 100%;">
+                </div>
+                <div class="text-block" style="flex: 0 0 48%;">
+                    <img src="img/pano_projection.png" style="width: 100%;">
+                </div>  
             </div>
             <div class="text" style="margin-top: 10px;">
                 Nous avons détecté la courbe d'arcade dentaire (panoramic curve) à partir des Maximum Intensity Projections (MIPs) et d'un seuillage d'intensité.  
@@ -80,8 +84,8 @@
         </div>
 
         <!-- Block 2 & Block 3 -->
-        <div style="display: flex; margin-top: 40px;">
-            <div style="width: 48%; margin-right: 4%;">
+        <div class="container" style="align-items: flex-start;">
+            <div class="text-block" style="flex: 0 0 48%;">
                 <div class="text"><b>2. Segmentation 2D des dents</b></div>
                 <div class="text">
                     Entrainement d'un U-Net 2D sur des panoramiques synthétiques pour identifier les dents en 2D, avec data augmentation (masking, flipping, suppression aléatoire de dents).
@@ -90,7 +94,7 @@
                 <img src="img/2d_segmentation.png" style="width: 100%; margin-top: 10px;">
             </div>
 
-            <div style="width: 48%;">
+            <div class="text-block" style="flex: 0 0 48%;">
                 <div class="text"><b>3. Reprojection 3D et masque binaire</b></div>
                 <div class="text">
                     Les labels 2D sont reprojetés en 3D en utilisant la courbe panoramique initiale et un modèle nnU-Net 3D binaire.
@@ -102,8 +106,9 @@
         </div>
 
         <!-- Block 4 & Block 5 -->
-        <div style="display: flex; margin-top: 40px;">
-            <div style="width: 48%; margin-right: 4%;">
+        
+        <div class="container" style="align-items: flex-start;">
+            <div class="text-block" style="flex: 0 0 48%;">
                 <div class="text"><b>4. Post-traitement</b></div>
                 <div class="text">
                     Pour homogénéiser les labels 3D, nous avons appliqué l'algorithme de watershed et un majority voting pour réduire le bruit et améliorer la cohérence des labels des dents.
@@ -111,7 +116,7 @@
                 <img src="img/3d_result.png" style="width: 100%; margin-top: 10px;">
             </div>
 
-            <div style="width: 48%;">
+            <div class="text-block" style="flex: 0 0 48%;">
                 <div class="text"><b>5. Résultats</b></div>
                 <div class="text">
                     Nous avons obtenu des résultats presque comparables à ceux de la méthode gagnante du challenge MICCAI ToothFairy 2023, tout en offrant une solution plus explicable et robuste grâce à l'utilisation des panoramiques.
