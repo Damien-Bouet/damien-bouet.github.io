@@ -29,21 +29,31 @@
         <div id="menu">
             <div class="choix" onclick="openPage('index.html')">Accueil</div>
             <div class="choix" onclick="scrollToElement('exp_pro')">Expériences Pro</div>
-            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
             <div class="choix" onclick="scrollToElement('etudes')">Etudes</div>
+            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
             <div class="choix" onclick="scrollToElement('contact')">Contact</div>
         </div>
     </nav>
 
     <div class="project_description">
-        <div class="title" >Tooth Segmentation of 3D CBCT exam</div>
-        <div class="sub_title">Hybrid pipeline leveraging 2D panoramic projection and 3D reprojection</div>
+        <div class="title-container">
+            <div class="title-text">
+                <div class="title" >Segmentation de scan 3D des dents</div>
+                <div class="sub_title">Méthode robuste aliant traitement d'image et deep learning</div>
+            </div>
+            <div class="title-logo">
+                <img src="img/wediagnostix.png" alt="WeDiagnostix">
+            </div>
+        </div>
+        
         <div class="keywords" style="margin-bottom: 40px;">
-            <div class="words">Medical Imaging</div>
+            <div class="words">Imagerie médicale</div>
             <div class="dot"></div>
             <div class="words">2D/3D Segmentation</div>
             <div class="dot"></div>
             <div class="words">Deep Learning</div>
+            <div class="dot"></div>
+            <div class="words">Traitement d'image</div>
             <div class="dot"></div>
             <div class="words">CBCT</div>
         </div>
@@ -64,8 +74,8 @@
                 Nous avons détecté la courbe d'arcade dentaire (panoramic curve) à partir des Maximum Intensity Projections (MIPs) et d'un seuillage d'intensité.  
                 Cette courbe représente l'arcade dentaire dans le volume 3D CBCT.
                 Pour obtenir la vue panoramique, nous avons défini pour chaque point de la courbe un plan orthogonal au vecteur tangentiel local.  
-                Ensuite, pour chaque plan, nous avons projeté les intensités des voxels du volume 3D en utilisant une agrégation par rayon ("ray aggregation") le long des normales à la courbe.  
-                Cette méthode permet de transformer la géométrie complexe de la mâchoire en une vue 2D simple, facilitant la segmentation.
+                Ensuite, pour chaque plan, nous avons projeté les intensités des voxels du volume 3D en utilisant une agrégation par rayon le long des normales à la courbe.  
+                Cette méthode permet de transformer la géométrie complexe de la mâchoire en une panoramique 2D synthétique, facilitant l'étape de segmentation.
             </div>
         </div>
 
@@ -74,7 +84,8 @@
             <div style="width: 48%; margin-right: 4%;">
                 <div class="text"><b>2. Segmentation 2D des dents</b></div>
                 <div class="text">
-                    Entrainement d'un U-Net 2D léger sur des panoramiques synthétiques pour prédire les dents en 2D, avec data augmentation poussée (masking, flipping, suppression aléatoire de dents).
+                    Entrainement d'un U-Net 2D sur des panoramiques synthétiques pour identifier les dents en 2D, avec data augmentation (masking, flipping, suppression aléatoire de dents).
+                    Cette tâche est relativement facile à résoudre. On obtient donc une très grzande précision avec un entrainement pas trop coûteux/long.
                 </div>
                 <img src="img/2d_segmentation.png" style="width: 100%; margin-top: 10px;">
             </div>
@@ -82,7 +93,9 @@
             <div style="width: 48%;">
                 <div class="text"><b>3. Reprojection 3D et masque binaire</b></div>
                 <div class="text">
-                    Les labels 2D sont reprojetés en 3D en utilisant la courbe panoramique initiale, puis affinés avec un modèle nnU-Net 3D binaire pour améliorer la précision globale.
+                    Les labels 2D sont reprojetés en 3D en utilisant la courbe panoramique initiale et un modèle nnU-Net 3D binaire.
+                    La forme des dents peut, quant à elle, est prédite directement avec un U-Net en 3D. C'est possible ici seulement
+                    car on résoud en 3D la tâche binaire dent vs le reste. Identifier les 40 classes directement en 3D n'est pas envisageable.
                 </div>
                 <img src="img/3d_reconstruction.png" style="width: 100%; margin-top: 10px;">
             </div>
@@ -101,7 +114,8 @@
             <div style="width: 48%;">
                 <div class="text"><b>5. Résultats</b></div>
                 <div class="text">
-                    Nos résultats sont comparables à ceux des top3 du challenge MICCAI ToothFairy 2023, tout en offrant une solution plus explicable et robuste grâce à l'utilisation des panoramiques.
+                    Nous avons obtenu des résultats presque comparables à ceux de la méthode gagnante du challenge MICCAI ToothFairy 2023, tout en offrant une solution plus explicable et robuste grâce à l'utilisation des panoramiques.
+                    A l'inverse, la méthode gagnante repose juste sur un énorme modèle de deep learning, très coûteux à entrainer et à utiliser.
                 </div>
                 <img src="img/3d_post_proccess.png" style="width: 100%; margin-top: 10px;">
             </div>

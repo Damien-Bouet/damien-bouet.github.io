@@ -33,8 +33,8 @@
         <div id="menu">
             <div class="choix" onclick="openPage('index.html')">Accueil</div>
             <div class="choix" onclick="scrollToElement('exp_pro')">Expériences Pro</div>
-            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
             <div class="choix" onclick="scrollToElement('etudes')">Etudes</div>
+            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
             <div class="choix" onclick="scrollToElement('contact')">Contact</div>
         </div>
     </nav>
@@ -43,13 +43,15 @@
         <div>
             <div class="text">
                 SALUT, C'EST DAMIEN !<br>
-                ETUDIANT EN DATA SCIENCE<br>
+                INGENIEUR EN DATA SCIENCE<br>
                 CENTRALESUPELEC | MVA<br>
             </div>
             <div class="keywords">
                 <div class="words">Deep Learning</div>
                 <div class="dot"></div>
                 <div class="words">Computer Vision</div>
+                <div class="dot"></div>
+                <div class="words">LLMs</div>
                 <div class="dot"></div>
                 <div class="words">Recherche</div>
             </div>
@@ -68,49 +70,56 @@
         <div class="projects">
             <div class="project" onclick="openPage('stage_idemia.html')">
                 <h2>Recherche en Computer Vision</h2>
-                <p>IDEMIA</p>
+                <div class="project_img"><img src="img/Idemia.png" alt="IDEMIA Logo"></div>
             </div>
             <div class="project" onclick="openPage('stage_quantmetry.html')">
                 <h2>Recherche et Conseil Data</h2>
-                <p>Quantmetry</p>
+                <div class="project_img"><img src="img/quantmetry.png" alt="IDEMIA Logo"></div>
             </div>
             <div class="project" onclick="openPage('stage_saint_gobain.html')">
                 <h2>Data Scientist</h2>
-                <p>Saint-Gobain</p>
+                <div class="project_img"><img src="img/saint_gobain.png" alt="IDEMIA Logo"></div>
             </div>
         </div>
     </div>
 
-
-    <div class="projets" id="projets">
-        <div class="title">Projets</div>
-        <div class="projects">
-            <div class="project" onclick="openPage('cbct_segmentation.html')">
-                <h2>3D Teeth Segmentation</h2>
-                <p>Projet de recherche - dernière année</p>
-            </div>
-            <div class="project" onclick="openPage('cleaning_blob.html')">
-                <h2>Cleaning Blob</h2>
-                <p>Automatisation d'un robot - Reinforcement Learning</p>
-            </div>
-        </div>
-    </div>
     
     <div class="projets" id="etudes">
         <div class="title">Etudes</div>
 
         <div class="projects">
             <div class="project" onclick="openPage('centrale.html')">
-                <h2>CentraleSupélec</h2>
-                <p>Diplôme d'ingénieur</p>
+                <h2>Diplôme d'ingénieur</h2>
                 <p>Mathématiques et Science des données</p>
+                <div class="project_img"><img src="img/Centrale.png" alt="IDEMIA Logo"></div>
             </div>
             <div class="project" onclick="openPage('mva.html')">
-                <h2>MVA (ENS Paris Saclay)</h2>
-                <p>Master 2</p>
+                <h2>Master en double diplôme</h2>
+                <p>ENS Paris-Saclay</p>
+                <div class="project_img"><img src="img/MVA-logo.png" alt="IDEMIA Logo"></div>
             </div>
         </div>
     </div>
+
+    <div class="projets" id="projets">
+        <div class="title">Projets</div>
+        <div class="projects">
+            <div class="project" onclick="openPage('cbct_segmentation.html')">
+                <h2>Segmentation en 3D des dents</h2>
+                <p>Projet de recherche - dernière année</p>
+                <div class="project_img">
+                    <img src="img/dents.png" alt="IDEMIA Logo" style="max-height: 6rem;">
+                    <img src="img/segmentation.png" alt="IDEMIA Logo" style="max-height: 6rem; margin-left: 0.4rem">
+                </div>
+            </div>
+            <div class="project" onclick="openPage('cleaning_blob.html')">
+                <h2>Reinforcement Learning</h2>
+                <p>Automatisation d'un robot - Simulation 3D</p>
+                <div class="project_img"><img src="img/keelcrab_photo.png" alt="IDEMIA Logo" style="max-height: 6rem;"></div>
+            </div>
+        </div>
+    </div>
+    
 
     <div id="contact" style="
         background-color: var(--blue1);

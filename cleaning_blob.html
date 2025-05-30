@@ -33,15 +33,23 @@
         <div id="menu">
             <div class="choix" onclick="openPage('index.html')">Accueil</div>
             <div class="choix" onclick="scrollToElement('exp_pro')">Expériences Pro</div>
-            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
             <div class="choix" onclick="scrollToElement('etudes')">Etudes</div>
+            <div class="choix" onclick="scrollToElement('projets')">Projets</div>
             <div class="choix" onclick="scrollToElement('contact')">Contact</div>
         </div>
     </nav>
 
     <div class="project_description">
-        <div class="title" >Cleaning Blob</div>
-        <div class="sub_title">Automatisation d'un robot par Reinforcement Learning</div>
+        <div class="title-container">
+            <div class="title-text">
+                <div class="title">Robot nettoyeur</div>
+                <div class="sub_title">Automatisation d'un robot par Reinforcement Learning</div>
+            </div>
+            <div class="title-logo" style="height: 5rem;">
+                <img src="img/keelcrab.png" alt="KeelCrab">
+            </div>
+        </div>
+
         <div class="keywords" style="margin-bottom: 40px;">
             <div class="words">RL</div>
             <div class="dot"></div>
@@ -59,11 +67,17 @@
             Il est maintenu contre la coque par un système d'aspiration et peut ête déplacé par l'utilisateur à distance.
             Le processus, jusque là manuel, est long et fastidieux, et semble pouvoir être automatisé.
         </div>
-        <div style="display: flex; align-items: flex-end;">
-            <img src="img/coque2.png" style="width:30%; scale:1; height: max-content; display:inline-block;">
-            <div class="text" style="display: inline-block; width:64%; margin-left: 5%;">
-                J'ai donc développé un environement simulé, dans le logiciel Unity, communiquant avec un script python,
-                pour pouvoir entrainer des algorithmes d'apprentissage par renforcement (RL).
+
+        
+        <div class="container flex_reverse">
+            <div class="image-block">
+                <img src="img/coque2.png" alt="Shape Interpolation">
+            </div>
+            <div class="text-block">
+                <div class="text">
+                    J'ai donc développé un environement simulé, dans le logiciel Unity, communiquant avec un script python,
+                    pour pouvoir entrainer des algorithmes d'apprentissage par renforcement (RL).
+                </div>
                 <div style="width: 100%; display: flex; align-items: flex-start;">
                     <div style="width: 60%; display:inline-block;">
                         <div class="text">Modélisation de la coque du bateau :<br>Demi Capsule</div>
@@ -82,13 +96,19 @@
             </div>
         </div>
 
-        <div style="display: flex; margin-top:40px">
-            <div class="text" style="display: inline-block; width:54%; margin-right: 5%;">
-                J'ai entraîné un algorithme de PPO (Proximal Policy Optimization), en donnant simplement une récompense pour chaque carré d'algue nettoyé.
-                On peut voir que l'agent à appris à se diriger vers les algues. Il a même appris, spontanément,
-                une trajectoire de nettoyage optimisée, en tournant de façon circulaire à partir du bord.
+        <div class="container">
+            <div class="text-block" style="text-align: center">
+                <div class="text">
+                    Nous avons ré-implémenté la méthode developpée dans l'article.
+                    Nous avons entrainé un modèle génératif profond pour reconstruire des données MNAR.
+                    Ces données manquantes dépendent de la valeur manquante elle-même. Inférer les données manquantes
+                    avec un modèle génératif permet donc d'améliorer grandement la qualité des reconstructions.
+                </div>
+                <img src="img/keelcrab_photo.png" style="max-width:100%; max-height:10rem; display:inline-block; margin-top: 1.5rem;">
             </div>
-            <img src="img/cleaning_blob_demo.gif" style="width:40%; scale:1; display:inline-block;">
+            <div class="image-block">
+                <img src="img/cleaning_blob_demo.gif" alt="Shape Interpolation">
+            </div>
         </div>
 
         
