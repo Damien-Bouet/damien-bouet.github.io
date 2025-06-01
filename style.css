@@ -16,7 +16,6 @@
 
 a:link {
   color: inherit; /* or specify a color */
-  text-decoration: none; /* optional, removes underline */
   text-decoration: underline;
 }
 
